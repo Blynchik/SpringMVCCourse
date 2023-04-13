@@ -13,6 +13,10 @@
 <body>
 
 <h2>Hello, Spring!</h2>
+<br>
+<br>
+
+<a href="askDetails">Your Details</a>
 
 </body>
 </html>
