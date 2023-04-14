@@ -32,9 +32,15 @@
 <%--        <form:option value="Human Resources" label="HR"/>--%>
 <%--        <form:option value="Sales" label="Sales"/>--%>
 
-        <form:options items="${employee.departments}"/>
+            <form:options items="${employee.departments}"/>
+        </form:select>
+    <br>
+    Which car do you want?
+<%--        BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
+<%--        Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
+<%--        Mercedes-Benz <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
 
-    </form:select>
+        <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
     <br>
     <input type="submit" value="OK">
 
