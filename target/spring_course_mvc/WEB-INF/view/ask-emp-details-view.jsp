@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Blynchik
@@ -17,14 +18,17 @@
 <br>
 <br>
 
-<form action="showDetails" method="get">
+<form:form action = "showDetails" modelAttribute="employee">
 
-    <input type="text" name="employeeName"
-           placeholder="Write your name"/>
+    Name <form:input path="name"/>
+    <br>
+    Surname <form:input path="surname"/>
+    <br>
+    Salary <form:input path="salary"/>
+    <br>
+    <input type="submit" value="OK">
 
-    <input type="submit"/>
-
-</form>
+</form:form>
 
 </body>
 </html>
