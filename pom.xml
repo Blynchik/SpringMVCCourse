@@ -14,12 +14,22 @@
   </properties>
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+
     <dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
-      <scope>provided</scope>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-core</artifactId>
+      <version>10.1.7</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.servlet.jsp.jstl</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+      <version>3.0.0</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
@@ -53,7 +63,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

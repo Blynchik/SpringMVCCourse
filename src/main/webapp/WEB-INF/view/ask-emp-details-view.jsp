@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Blynchik
@@ -6,7 +7,7 @@
   Time: 13:01
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Title</title>
@@ -41,6 +42,12 @@
 <%--        Mercedes-Benz <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
 
         <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+    <br>
+    Foreign language(s)
+<%--        EN <form:checkbox path="languages" value="English"/>--%>
+<%--        DE <form:checkbox path="languages" value="Deutch"/>--%>
+<%--        FR <form:checkbox path="languages" value="French"/>--%>
+        <form:checkboxes path="languages" items="${employee.languageList}"/>
     <br>
     <input type="submit" value="OK">
 
