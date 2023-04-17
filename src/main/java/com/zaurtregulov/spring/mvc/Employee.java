@@ -1,12 +1,20 @@
 package com.zaurtregulov.spring.mvc;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
 
+    @Size(min = 2, message = "min 2 symbols")
     private String name;
-
+//    @NotNull
+//    @NotEmpty
+    @NotBlank(message = "required field")
     private String surname;
 
     private int salary;
@@ -15,7 +23,7 @@ public class Employee {
 
     private Map<String, String> departments;
 
-    private  String carBrand;
+    private String carBrand;
 
     private Map<String, String> carBrands;
 
