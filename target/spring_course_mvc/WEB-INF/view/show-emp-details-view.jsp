@@ -35,6 +35,7 @@ Language(s):
         <li>${lang}</li>
     </c:forEach>
 </ul>
+Your phone number: ${employee.phoneNumber}
 
 </body>
 </html>

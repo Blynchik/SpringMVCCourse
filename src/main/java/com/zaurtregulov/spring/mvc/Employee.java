@@ -1,9 +1,6 @@
 package com.zaurtregulov.spring.mvc;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,11 +9,13 @@ public class Employee {
 
     @Size(min = 2, message = "min 2 symbols")
     private String name;
-//    @NotNull
+    //    @NotNull
 //    @NotEmpty
     @NotBlank(message = "required field")
     private String surname;
 
+    @Min(value = 500, message = "must be greater than 499")
+    @Max(value = 1000, message = "must be less than 1001")
     private int salary;
 
     private String department;
@@ -30,6 +29,9 @@ public class Employee {
     private String[] languages;
 
     private Map<String, String> languageList;
+
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XXX-XX-XX")
+    private String phoneNumber;
 
     public Employee() {
         departments = new HashMap<>();
@@ -58,6 +60,14 @@ public class Employee {
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
                 '}';
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public Map<String, String> getLanguageList() {

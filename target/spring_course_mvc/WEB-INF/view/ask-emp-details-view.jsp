@@ -28,6 +28,7 @@
     <form:errors path="surname"/>
     <br>
     Salary <form:input path="salary"/>
+    <form:errors path="salary"/>
     <br>
     Department <form:select path="department">
 
@@ -50,6 +51,9 @@
 <%--        DE <form:checkbox path="languages" value="Deutch"/>--%>
 <%--        FR <form:checkbox path="languages" value="French"/>--%>
         <form:checkboxes path="languages" items="${employee.languageList}"/>
+    <br>
+    Phone number <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
     <br>
     <input type="submit" value="OK">
 
